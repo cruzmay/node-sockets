@@ -1,5 +1,8 @@
 import { Socket } from "socket.io"
 import { DefaultEventsMap } from "socket.io/dist/typed-events"
+import { TicketController } from "../models/ticket-controller"
+
+const ticketController = new TicketController()
 
 const socketController = (socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>) => {
     console.log("cliente conectado", socket.id)
